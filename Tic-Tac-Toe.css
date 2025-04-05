@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+}
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.cell:hover {
+    transform: scale(1.1);
+    background: #ffdde1;
+}
+.winner {
+    color: #c4725f;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.restart-btn, .music-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: #f4988e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.restart-btn:hover, .music-btn:hover {
+    background: #ed9280;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.winning-cell {
+    background: #ff5733 !important;
+    color: white;
+    font-weight: bold;
+}
+.lighten-cell {
+    background: rgba(255, 255, 255, 0.5);
+    color: #aaa;
+}
